@@ -19,8 +19,8 @@ export default function AboutScreen() {
   version: "1.0.0",
   description:
    "BorrowTrack is your personal borrowing assistant that helps you keep track of items you've lent to others. Never lose track of your belongings again with smart reminders, overdue alerts, and a complete borrowing history.",
-  developer: "BorrowTrack Team",
-  email: "support@borrowtrack.app",
+  developer: "Ariel Jake",
+  email: "ariel_jake@borrowtrack.app",
   website: "www.borrowtrack.app",
  };
 
