@@ -117,18 +117,15 @@ export default function HistoryScreen() {
   });
  };
 
- // Filter and sort logic
  const getFilteredAndSortedItems = () => {
   let filtered = [...items];
 
-  // Apply filter
   if (filterType === "on_time") {
    filtered = filtered.filter((item) => isOnTime(item));
   } else if (filterType === "overdue") {
    filtered = filtered.filter((item) => !isOnTime(item));
   }
 
-  // Apply search
   if (searchQuery.trim()) {
    const query = searchQuery.toLowerCase();
    filtered = filtered.filter(
@@ -138,7 +135,6 @@ export default function HistoryScreen() {
    );
   }
 
-  // Apply sort by returnedAt date
   filtered.sort((a, b) => {
    const dateA = new Date(a.returnedAt || a.createdAt).getTime();
    const dateB = new Date(b.returnedAt || b.createdAt).getTime();
@@ -232,7 +228,6 @@ export default function HistoryScreen() {
   </View>
  );
 
- // Item Detail View
  if (selectedItem) {
   return (
    <View style={styles.container}>
@@ -386,7 +381,6 @@ export default function HistoryScreen() {
   );
  }
 
- // Main History View
  return (
   <View style={styles.container}>
    <StatusBar backgroundColor="#00b4d8" barStyle="light-content" />
@@ -565,7 +559,7 @@ const styles = StyleSheet.create({
   color: "#FFFFFF",
   opacity: 0.9,
  },
- // Search Styles
+
  searchContainer: {
   flexDirection: "row",
   alignItems: "center",
@@ -589,7 +583,7 @@ const styles = StyleSheet.create({
   fontSize: 16,
   color: "#333",
  },
- // Controls Styles
+
  controlsContainer: {
   paddingHorizontal: 20,
   marginTop: 15,
@@ -649,7 +643,7 @@ const styles = StyleSheet.create({
   fontWeight: "600",
   marginLeft: 6,
  },
- // List Styles
+
  listContainer: {
   padding: 16,
   paddingBottom: 20,
@@ -752,7 +746,7 @@ const styles = StyleSheet.create({
   fontSize: 11,
   color: "#999",
  },
- // Empty State
+
  emptyState: {
   flex: 1,
   justifyContent: "center",
@@ -771,7 +765,7 @@ const styles = StyleSheet.create({
   marginTop: 8,
   textAlign: "center",
  },
- // Detail Header Styles
+
  detailHeader: {
   flexDirection: "row",
   alignItems: "center",
@@ -797,7 +791,7 @@ const styles = StyleSheet.create({
   opacity: 0.8,
   marginTop: 2,
  },
- // Detail Content Styles
+
  detailContent: {
   flex: 1,
   padding: 20,
@@ -918,7 +912,7 @@ const styles = StyleSheet.create({
   backgroundColor: "#F0F0F0",
   marginLeft: 60,
  },
- // Action Buttons
+
  actionButtons: {
   gap: 12,
   marginBottom: 30,

@@ -19,7 +19,7 @@ import { BorrowedItem, itemService } from "../../services/itemService";
 import { userService } from "../../services/userService";
 
 const {width} = Dimensions.get("window");
-const CARD_SIZE = (width - 56) / 2; // 2 columns with padding
+const CARD_SIZE = (width - 56) / 2;
 
 type SortOrder = "asc" | "desc";
 
@@ -106,11 +106,9 @@ export default function NotificationsScreen() {
   return diffDays;
  };
 
- // Filter and sort logic
  const getFilteredAndSortedItems = () => {
   let filtered = [...items];
 
-  // Apply search
   if (searchQuery.trim()) {
    const query = searchQuery.toLowerCase();
    filtered = filtered.filter(
@@ -120,7 +118,6 @@ export default function NotificationsScreen() {
    );
   }
 
-  // Apply sort
   filtered.sort((a, b) => {
    const dateA = new Date(a.returnDate).getTime();
    const dateB = new Date(b.returnDate).getTime();
@@ -183,7 +180,6 @@ export default function NotificationsScreen() {
   );
  };
 
- // Item Detail View
  if (selectedItem) {
   const daysOverdue = getDaysOverdue(selectedItem.returnDate);
 
@@ -335,7 +331,6 @@ export default function NotificationsScreen() {
   );
  }
 
- // Main Notifications View
  return (
   <View style={styles.container}>
    <StatusBar backgroundColor="#FF4444" barStyle="light-content" />
@@ -474,7 +469,7 @@ const styles = StyleSheet.create({
   color: "#FFFFFF",
   opacity: 0.9,
  },
- // Warning Message
+
  warningMessage: {
   flexDirection: "row",
   alignItems: "center",
@@ -496,7 +491,7 @@ const styles = StyleSheet.create({
   marginLeft: 10,
   flex: 1,
  },
- // Search Styles
+
  searchContainer: {
   flexDirection: "row",
   alignItems: "center",
@@ -520,7 +515,7 @@ const styles = StyleSheet.create({
   fontSize: 16,
   color: "#333",
  },
- // Sort Button
+
  sortButton: {
   flexDirection: "row",
   alignItems: "center",
@@ -542,7 +537,7 @@ const styles = StyleSheet.create({
   fontWeight: "600",
   marginLeft: 6,
  },
- // Grid Styles
+
  gridContainer: {
   padding: 16,
   paddingBottom: 20,
@@ -625,7 +620,7 @@ const styles = StyleSheet.create({
   color: "#FF4444",
   fontWeight: "bold",
  },
- // Empty State
+
  emptyState: {
   flex: 1,
   justifyContent: "center",
@@ -644,7 +639,7 @@ const styles = StyleSheet.create({
   marginTop: 8,
   textAlign: "center",
  },
- // Detail Header
+
  detailHeader: {
   backgroundColor: "#FF4444",
   paddingTop: Platform.OS === "ios" ? 50 : 40,
@@ -683,7 +678,7 @@ const styles = StyleSheet.create({
   opacity: 0.8,
   marginTop: 3,
  },
- // Detail Content
+
  detailContent: {
   flex: 1,
   padding: 20,
@@ -719,7 +714,7 @@ const styles = StyleSheet.create({
   fontSize: 16,
   opacity: 0.5,
  },
- // Action Message Card
+
  actionMessageCard: {
   backgroundColor: "#FFFFFF",
   borderRadius: 15,
@@ -753,7 +748,7 @@ const styles = StyleSheet.create({
   fontWeight: "bold",
   color: "#333",
  },
- // Details Card
+
  detailsCard: {
   backgroundColor: "#FFFFFF",
   borderRadius: 15,
@@ -812,7 +807,7 @@ const styles = StyleSheet.create({
   backgroundColor: "#FFE8E8",
   marginLeft: 60,
  },
- // Action Buttons
+
  actionButtons: {
   gap: 12,
   marginBottom: 30,

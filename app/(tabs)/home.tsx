@@ -1,7 +1,4 @@
-import {
- Ionicons,
- MaterialCommunityIcons
-} from "@expo/vector-icons";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { useFocusEffect, useRouter } from "expo-router";
 import React, { useCallback, useEffect, useState } from "react";
@@ -35,7 +32,6 @@ export default function HomeScreen() {
  const [currentUser, setCurrentUser] = useState<any>(null);
  const [selectedItem, setSelectedItem] = useState<BorrowedItem | null>(null);
 
- // Form states
  const [itemName, setItemName] = useState("");
  const [borrowerName, setBorrowerName] = useState("");
  const [dateBorrowed, setDateBorrowed] = useState("");
@@ -46,7 +42,6 @@ export default function HomeScreen() {
   loadUserAndItems();
  }, []);
 
- // Reload items when screen is focused
  useFocusEffect(
   useCallback(() => {
    loadItems();
@@ -93,7 +88,6 @@ export default function HomeScreen() {
  };
 
  const handleAddItem = async () => {
-  // Validation
   if (!itemName.trim()) {
    Alert.alert("Error", "Please enter item name");
    return;
@@ -121,7 +115,6 @@ export default function HomeScreen() {
     userId: currentUser.id,
    });
 
-   // Reset form
    setItemName("");
    setBorrowerName("");
    setDateBorrowed("");
@@ -289,7 +282,6 @@ export default function HomeScreen() {
   </TouchableOpacity>
  );
 
- // Item Details View
  if (selectedItem) {
   return (
    <View style={styles.container}>
@@ -464,7 +456,6 @@ export default function HomeScreen() {
   );
  }
 
- // Main List View
  return (
   <View style={styles.container}>
    <StatusBar backgroundColor="#00b4d8" barStyle="light-content" />
@@ -714,7 +705,7 @@ const styles = StyleSheet.create({
   opacity: 0.9,
   marginTop: 5,
  },
- // Detail Header Styles
+
  detailHeader: {
   flexDirection: "row",
   alignItems: "center",
@@ -732,7 +723,7 @@ const styles = StyleSheet.create({
   color: "#FFFFFF",
   flex: 1,
  },
- // Detail Content Styles
+
  detailContent: {
   flex: 1,
   padding: 20,
@@ -899,7 +890,7 @@ const styles = StyleSheet.create({
   fontWeight: "bold",
   marginLeft: 8,
  },
- // List View Styles
+
  listContainer: {
   padding: 16,
   paddingBottom: 80,
@@ -1034,7 +1025,7 @@ const styles = StyleSheet.create({
   marginTop: 8,
   textAlign: "center",
  },
- // Modal Styles
+
  modalOverlay: {
   flex: 1,
   backgroundColor: "rgba(0, 0, 0, 0.5)",

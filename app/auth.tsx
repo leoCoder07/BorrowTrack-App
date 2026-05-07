@@ -23,7 +23,6 @@ export default function AuthScreen() {
  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
  const [isLoading, setIsLoading] = useState(false);
 
- // Form states
  const [username, setUsername] = useState("");
  const [email, setEmail] = useState("");
  const [password, setPassword] = useState("");
@@ -31,7 +30,6 @@ export default function AuthScreen() {
 
  const validateForm = (): boolean => {
   if (!isLogin) {
-   // Sign up validation
    if (!username.trim()) {
     Alert.alert("Error", "Please enter a username");
     return false;
@@ -57,7 +55,6 @@ export default function AuthScreen() {
     return false;
    }
   } else {
-   // Login validation
    if (!username.trim()) {
     Alert.alert("Error", "Please enter your username or email");
     return false;
@@ -77,13 +74,11 @@ export default function AuthScreen() {
 
   try {
    if (isLogin) {
-    // Login
     await userService.login(username, password);
     Alert.alert("Success", "Welcome back!", [
      {text: "OK", onPress: () => router.replace("/(tabs)/home" as any)},
     ]);
    } else {
-    // Sign Up
     await userService.register(username, email, password);
     Alert.alert("Success", "Account created successfully!", [
      {text: "OK", onPress: () => router.replace("/auth" as any)},

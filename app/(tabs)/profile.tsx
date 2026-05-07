@@ -1,7 +1,4 @@
-import {
- FontAwesome5,
- Ionicons
-} from "@expo/vector-icons";
+import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as ImagePicker from "expo-image-picker";
 import { useRouter } from "expo-router";
@@ -34,7 +31,6 @@ export default function ProfileScreen() {
   const currentUser = await userService.getCurrentUser();
   setUser(currentUser);
 
-  // Load saved profile image
   const savedImage = await AsyncStorage.getItem(PROFILE_IMAGE_KEY);
   if (savedImage) {
    setProfileImage(savedImage);
@@ -288,7 +284,7 @@ const styles = StyleSheet.create({
   padding: 20,
   paddingBottom: 40,
  },
- // Profile Picture
+
  profilePictureSection: {
   alignItems: "center",
   marginTop: 20,
@@ -338,7 +334,7 @@ const styles = StyleSheet.create({
   color: "#00b4d8",
   fontWeight: "600",
  },
- // Info Card
+
  infoCard: {
   backgroundColor: "#FFFFFF",
   borderRadius: 16,
@@ -385,7 +381,7 @@ const styles = StyleSheet.create({
   marginVertical: 16,
   marginLeft: 59,
  },
- // Menu Section
+
  menuSection: {
   backgroundColor: "#FFFFFF",
   borderRadius: 16,
@@ -422,7 +418,7 @@ const styles = StyleSheet.create({
   fontWeight: "500",
   color: "#333",
  },
- // Logout Button
+
  logoutButton: {
   backgroundColor: "#FF4444",
   paddingVertical: 16,
