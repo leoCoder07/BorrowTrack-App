@@ -25,9 +25,9 @@ export default function WelcomeScreen() {
     style={styles.backgroundImage}
     resizeMode="cover"
    >
-    {/* Overlay for better text visibility */}
+    {}
     <View style={styles.overlay}>
-     {/* Title and Logo Section */}
+     {}
      <View style={styles.titleContainer}>
       <MaterialCommunityIcons
        name="bag-personal"
@@ -38,7 +38,7 @@ export default function WelcomeScreen() {
       <Text style={styles.titleText}>BorrowTrack</Text>
      </View>
 
-     {/* Tagline */}
+     {}
 
      <View style={styles.tagLineAndButton}>
       <Text style={styles.taglineText}>

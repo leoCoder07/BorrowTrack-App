@@ -133,7 +133,7 @@ export default function ProfileScreen() {
   <View style={styles.container}>
    <StatusBar backgroundColor="#00b4d8" barStyle="light-content" />
 
-   {/* Header */}
+   {}
    <View style={styles.header}>
     <View style={styles.headerContent}>
      <FontAwesome5
@@ -152,7 +152,7 @@ export default function ProfileScreen() {
     showsVerticalScrollIndicator={false}
     contentContainerStyle={styles.scrollContent}
    >
-    {/* Profile Picture Section */}
+    {}
     <TouchableOpacity
      style={styles.profilePictureSection}
      onPress={handleChangeProfilePicture}
@@ -173,7 +173,7 @@ export default function ProfileScreen() {
      <Text style={styles.changePhotoText}>Change Profile Picture</Text>
     </TouchableOpacity>
 
-    {/* User Info Card */}
+    {}
     {user && (
      <View style={styles.infoCard}>
       <View style={styles.infoRow}>
@@ -200,7 +200,7 @@ export default function ProfileScreen() {
      </View>
     )}
 
-    {/* Menu Items */}
+    {}
     <View style={styles.menuSection}>
      <TouchableOpacity
       style={styles.menuItem}
@@ -227,7 +227,7 @@ export default function ProfileScreen() {
      </TouchableOpacity>
     </View>
 
-    {/* Logout Button */}
+    {}
     <TouchableOpacity
      style={styles.logoutButton}
      onPress={handleLogout}

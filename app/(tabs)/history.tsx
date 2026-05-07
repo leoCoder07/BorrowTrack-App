@@ -153,7 +153,7 @@ export default function HistoryScreen() {
     onPress={() => setSelectedItem(item)}
     activeOpacity={0.7}
    >
-    {/* Image Preview */}
+    {}
     {item.imageUri ? (
      <View style={styles.itemImageContainer}>
       <Image
@@ -173,7 +173,7 @@ export default function HistoryScreen() {
      </View>
     )}
 
-    {/* Item Details */}
+    {}
     <View style={styles.itemDetails}>
      <View style={styles.itemTopRow}>
       <Text style={styles.itemName} numberOfLines={1}>
@@ -233,7 +233,7 @@ export default function HistoryScreen() {
    <View style={styles.container}>
     <StatusBar backgroundColor="#00b4d8" barStyle="light-content" />
 
-    {/* Header */}
+    {}
     <View style={styles.header}>
      <View style={styles.detailHeader}>
       <TouchableOpacity
@@ -257,7 +257,7 @@ export default function HistoryScreen() {
      style={styles.detailContent}
      showsVerticalScrollIndicator={false}
     >
-     {/* Image Section */}
+     {}
      <View style={styles.detailImageContainer}>
       {selectedItem.imageUri ? (
        <Image
@@ -278,7 +278,7 @@ export default function HistoryScreen() {
       )}
      </View>
 
-     {/* Status Badge */}
+     {}
      <View style={styles.detailStatusContainer}>
       <View
        style={[
@@ -297,7 +297,7 @@ export default function HistoryScreen() {
       </View>
      </View>
 
-     {/* Details Card */}
+     {}
      <View style={styles.detailsCard}>
       <Text style={styles.detailsCardTitle}>Return Information</Text>
 
@@ -356,7 +356,7 @@ export default function HistoryScreen() {
       </View>
      </View>
 
-     {/* Action Buttons */}
+     {}
      <View style={styles.actionButtons}>
       <TouchableOpacity
        style={styles.restoreButton}
@@ -385,7 +385,7 @@ export default function HistoryScreen() {
   <View style={styles.container}>
    <StatusBar backgroundColor="#00b4d8" barStyle="light-content" />
 
-   {/* Header */}
+   {}
    <View style={styles.header}>
     <View style={styles.headerTop}>
      <View style={styles.headerTitleRow}>
@@ -401,7 +401,7 @@ export default function HistoryScreen() {
     </View>
    </View>
 
-   {/* Search Bar */}
+   {}
    <View style={styles.searchContainer}>
     <Ionicons
      name="search-outline"
@@ -423,7 +423,7 @@ export default function HistoryScreen() {
     )}
    </View>
 
-   {/* Filter and Sort Controls */}
+   {}
    <View style={styles.controlsContainer}>
     <View style={styles.filterButtons}>
      <TouchableOpacity
@@ -491,7 +491,7 @@ export default function HistoryScreen() {
     </TouchableOpacity>
    </View>
 
-   {/* History List */}
+   {}
    {filteredItems.length === 0 ? (
     <View style={styles.emptyState}>
      <MaterialCommunityIcons

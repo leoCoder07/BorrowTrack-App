@@ -101,7 +101,7 @@ export default function AuthScreen() {
     contentContainerStyle={styles.scrollContent}
     keyboardShouldPersistTaps="handled"
    >
-    {/* Header Section */}
+    {}
     <View style={styles.headerSection}>
      <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
       <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
@@ -117,9 +117,9 @@ export default function AuthScreen() {
      </Text>
     </View>
 
-    {/* Form Section */}
+    {}
     <View style={styles.formSection}>
-     {/* Toggle Buttons */}
+     {}
      <View style={styles.toggleContainer}>
       <TouchableOpacity
        style={[styles.toggleButton, isLogin && styles.toggleButtonActive]}
@@ -143,7 +143,7 @@ export default function AuthScreen() {
       </TouchableOpacity>
      </View>
 
-     {/* Sign Up Fields */}
+     {}
      {!isLogin && (
       <>
        <View style={styles.inputContainer}>
@@ -183,7 +183,7 @@ export default function AuthScreen() {
       </>
      )}
 
-     {/* Login Username/Email Field */}
+     {}
      {isLogin && (
       <View style={styles.inputContainer}>
        <Ionicons
@@ -203,7 +203,7 @@ export default function AuthScreen() {
       </View>
      )}
 
-     {/* Password Field */}
+     {}
      <View style={styles.inputContainer}>
       <Ionicons
        name="lock-closed-outline"
@@ -232,7 +232,7 @@ export default function AuthScreen() {
       </TouchableOpacity>
      </View>
 
-     {/* Confirm Password Field */}
+     {}
      {!isLogin && (
       <View style={styles.inputContainer}>
        <Ionicons
@@ -263,7 +263,7 @@ export default function AuthScreen() {
       </View>
      )}
 
-     {/* Submit Button */}
+     {}
      <TouchableOpacity
       style={[styles.submitButton, isLoading && styles.submitButtonDisabled]}
       onPress={handleSubmit}
@@ -287,14 +287,14 @@ export default function AuthScreen() {
       )}
      </TouchableOpacity>
 
-     {/* Forgot Password (Login only) */}
+     {}
      {isLogin && (
       <TouchableOpacity style={styles.forgotPassword}>
        <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
       </TouchableOpacity>
      )}
 
-     {/* Terms and Conditions (Sign Up only) */}
+     {}
      {!isLogin && (
       <Text style={styles.termsText}>
        By signing up, you agree to our{" "}

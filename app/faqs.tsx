@@ -102,7 +102,7 @@ export default function FAQsScreen() {
   <SafeAreaView style={styles.container}>
    <StatusBar barStyle="dark-content" backgroundColor="#F5F5F5" />
 
-   {/* Header */}
+   {}
    <View style={styles.header}>
     <TouchableOpacity onPress={() => router.back()} style={styles.headerButton}>
      <Ionicons name="arrow-back" size={24} color="#00b4d8" />
@@ -147,7 +147,7 @@ export default function FAQsScreen() {
      </View>
     ))}
 
-    {/* Contact Section */}
+    {}
     <View style={styles.contactCard}>
      <Ionicons name="chatbubble-ellipses-outline" size={32} color="#00b4d8" />
      <Text style={styles.contactTitle}>Still have questions?</Text>

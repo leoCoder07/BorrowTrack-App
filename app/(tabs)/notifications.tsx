@@ -138,7 +138,7 @@ export default function NotificationsScreen() {
     onPress={() => setSelectedItem(item)}
     activeOpacity={0.7}
    >
-    {/* Image */}
+    {}
     <View style={styles.cardImageContainer}>
      {item.imageUri ? (
       <Image
@@ -156,13 +156,13 @@ export default function NotificationsScreen() {
        />
       </View>
      )}
-     {/* Days Overdue Badge */}
+     {}
      <View style={styles.daysOverdueBadge}>
       <Text style={styles.daysOverdueText}>{daysOverdue}d</Text>
      </View>
     </View>
 
-    {/* Content */}
+    {}
     <View style={styles.cardContent}>
      <Text style={styles.cardItemName} numberOfLines={1}>
       {item.itemName}
@@ -187,7 +187,7 @@ export default function NotificationsScreen() {
    <View style={styles.container}>
     <StatusBar backgroundColor="#FF4444" barStyle="light-content" />
 
-    {/* Header */}
+    {}
     <View style={styles.detailHeader}>
      <View style={styles.detailHeaderRow}>
       <TouchableOpacity
@@ -211,7 +211,7 @@ export default function NotificationsScreen() {
      style={styles.detailContent}
      showsVerticalScrollIndicator={false}
     >
-     {/* Image Section */}
+     {}
      <View style={styles.detailImageContainer}>
       {selectedItem.imageUri ? (
        <Image
@@ -232,7 +232,7 @@ export default function NotificationsScreen() {
       )}
      </View>
 
-     {/* Action Message */}
+     {}
      <View style={styles.actionMessageCard}>
       <View style={styles.actionIconContainer}>
        <Ionicons name="warning" size={30} color="#FF4444" />
@@ -249,7 +249,7 @@ export default function NotificationsScreen() {
       </Text>
      </View>
 
-     {/* Details Card */}
+     {}
      <View style={styles.detailsCard}>
       <Text style={styles.detailsCardTitle}>Item Details</Text>
 
@@ -306,7 +306,7 @@ export default function NotificationsScreen() {
       </View>
      </View>
 
-     {/* Action Buttons */}
+     {}
      <View style={styles.actionButtons}>
       <TouchableOpacity
        style={styles.markReturnedButton}
@@ -335,7 +335,7 @@ export default function NotificationsScreen() {
   <View style={styles.container}>
    <StatusBar backgroundColor="#FF4444" barStyle="light-content" />
 
-   {/* Header */}
+   {}
    <View style={styles.header}>
     <View style={styles.headerTop}>
      <View style={styles.headerTitleRow}>
@@ -351,7 +351,7 @@ export default function NotificationsScreen() {
     </View>
    </View>
 
-   {/* Warning Message */}
+   {}
    {items.length > 0 && (
     <View style={styles.warningMessage}>
      <Ionicons name="warning" size={20} color="#FFFFFF" />
@@ -362,7 +362,7 @@ export default function NotificationsScreen() {
     </View>
    )}
 
-   {/* Search Bar */}
+   {}
    <View style={styles.searchContainer}>
     <Ionicons
      name="search-outline"
@@ -384,7 +384,7 @@ export default function NotificationsScreen() {
     )}
    </View>
 
-   {/* Sort Button */}
+   {}
    <TouchableOpacity
     style={styles.sortButton}
     onPress={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
@@ -399,7 +399,7 @@ export default function NotificationsScreen() {
     </Text>
    </TouchableOpacity>
 
-   {/* Items Grid */}
+   {}
    {filteredItems.length === 0 ? (
     <View style={styles.emptyState}>
      <Ionicons

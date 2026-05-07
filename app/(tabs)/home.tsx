@@ -213,7 +213,7 @@ export default function HomeScreen() {
    onPress={() => setSelectedItem(item)}
   >
    <View style={styles.itemCardContent}>
-    {/* Image Preview */}
+    {}
     {item.imageUri ? (
      <View style={styles.itemImageContainer}>
       <Image
@@ -233,7 +233,7 @@ export default function HomeScreen() {
      </View>
     )}
 
-    {/* Item Details */}
+    {}
     <View style={styles.itemDetails}>
      <View style={styles.itemHeader}>
       <View style={styles.itemInfo}>
@@ -287,7 +287,7 @@ export default function HomeScreen() {
    <View style={styles.container}>
     <StatusBar backgroundColor="#00b4d8" barStyle="light-content" />
 
-    {/* Header */}
+    {}
     <View style={styles.header}>
      <View style={styles.detailHeader}>
       <TouchableOpacity
@@ -306,7 +306,7 @@ export default function HomeScreen() {
      style={styles.detailContent}
      showsVerticalScrollIndicator={false}
     >
-     {/* Image Section */}
+     {}
      <View style={styles.detailImageContainer}>
       {selectedItem.imageUri ? (
        <Image
@@ -327,7 +327,7 @@ export default function HomeScreen() {
       )}
      </View>
 
-     {/* Status Badge */}
+     {}
      <View style={styles.detailStatusContainer}>
       <View
        style={[
@@ -346,7 +346,7 @@ export default function HomeScreen() {
       </View>
      </View>
 
-     {/* Details Card */}
+     {}
      <View style={styles.detailsCard}>
       <Text style={styles.detailsCardTitle}>Item Information</Text>
 
@@ -422,7 +422,7 @@ export default function HomeScreen() {
       </View>
      </View>
 
-     {/* Action Buttons */}
+     {}
      <View style={styles.actionButtons}>
       {selectedItem.status !== "returned" && (
        <TouchableOpacity
@@ -460,7 +460,7 @@ export default function HomeScreen() {
   <View style={styles.container}>
    <StatusBar backgroundColor="#00b4d8" barStyle="light-content" />
 
-   {/* Header */}
+   {}
    <View style={styles.header}>
     <View style={styles.headerContent}>
      <View style={styles.logoContainer}>
@@ -471,7 +471,7 @@ export default function HomeScreen() {
     <Text style={styles.subHeader}>Dashboard: Borrowed Items</Text>
    </View>
 
-   {/* Items List */}
+   {}
    {items.length === 0 ? (
     <View style={styles.emptyState}>
      <MaterialCommunityIcons
@@ -495,7 +495,7 @@ export default function HomeScreen() {
     />
    )}
 
-   {/* Add Button (FAB) */}
+   {}
    <TouchableOpacity
     style={styles.fab}
     onPress={() => setModalVisible(true)}
@@ -504,7 +504,7 @@ export default function HomeScreen() {
     <Ionicons name="add" size={30} color="#FFFFFF" />
    </TouchableOpacity>
 
-   {/* Add Item Modal */}
+   {}
    <Modal
     animationType="slide"
     transparent={true}
@@ -523,7 +523,7 @@ export default function HomeScreen() {
        keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 0}
       >
        <View style={styles.modalContainer}>
-        {/* Modal Header */}
+        {}
         <View style={styles.modalHeader}>
          <Text style={styles.modalTitle}>Add Borrowed Item</Text>
          <TouchableOpacity
@@ -542,7 +542,7 @@ export default function HomeScreen() {
          keyboardShouldPersistTaps="handled"
          contentContainerStyle={styles.scrollContent}
         >
-         {/* Image Picker */}
+         {}
          <TouchableOpacity
           style={styles.imagePicker}
           onPress={handleOpenCamera}
@@ -559,7 +559,7 @@ export default function HomeScreen() {
           )}
          </TouchableOpacity>
 
-         {/* Item Name Input */}
+         {}
          <View style={styles.inputGroup}>
           <Text style={styles.inputLabel}>Item Name *</Text>
           <View style={styles.inputContainer}>
@@ -580,7 +580,7 @@ export default function HomeScreen() {
           </View>
          </View>
 
-         {/* Borrower Name Input */}
+         {}
          <View style={styles.inputGroup}>
           <Text style={styles.inputLabel}>Borrower Name *</Text>
           <View style={styles.inputContainer}>
@@ -601,7 +601,7 @@ export default function HomeScreen() {
           </View>
          </View>
 
-         {/* Date Borrowed Input */}
+         {}
          <View style={styles.inputGroup}>
           <Text style={styles.inputLabel}>Date Borrowed *</Text>
           <View style={styles.inputContainer}>
@@ -623,7 +623,7 @@ export default function HomeScreen() {
           </View>
          </View>
 
-         {/* Return Date Input */}
+         {}
          <View style={styles.inputGroup}>
           <Text style={styles.inputLabel}>Return Date *</Text>
           <View style={styles.inputContainer}>
@@ -646,7 +646,7 @@ export default function HomeScreen() {
           </View>
          </View>
 
-         {/* Add Button */}
+         {}
          <TouchableOpacity
           style={styles.addButton}
           onPress={handleAddItem}

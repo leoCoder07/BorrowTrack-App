@@ -78,7 +78,7 @@ export default function AboutScreen() {
   <SafeAreaView style={styles.container}>
    <StatusBar barStyle="dark-content" backgroundColor="#F5F5F5" />
 
-   {/* Header */}
+   {}
    <View style={styles.header}>
     <TouchableOpacity onPress={() => router.back()} style={styles.headerButton}>
      <Ionicons name="arrow-back" size={24} color="#00b4d8" />
@@ -92,7 +92,7 @@ export default function AboutScreen() {
     contentContainerStyle={styles.scrollContent}
     showsVerticalScrollIndicator={false}
    >
-    {/* Logo Section */}
+    {}
     <View style={styles.logoSection}>
      <View style={styles.logoContainer}>
       <MaterialCommunityIcons name="bag-personal" size={48} color="#ffffff" />
@@ -101,12 +101,12 @@ export default function AboutScreen() {
      <Text style={styles.appVersion}>Version {appInfo.version}</Text>
     </View>
 
-    {/* Description */}
+    {}
     <View style={styles.card}>
      <Text style={styles.descriptionText}>{appInfo.description}</Text>
     </View>
 
-    {/* Developer Info */}
+    {}
     <View style={styles.card}>
      <View style={styles.infoRow}>
       <View style={styles.infoIconContainer}>
@@ -145,7 +145,7 @@ export default function AboutScreen() {
      </TouchableOpacity>
     </View>
 
-    {/* Actions Section */}
+    {}
     <View style={styles.actionsSection}>
      <TouchableOpacity
       style={styles.actionButton}
@@ -196,7 +196,7 @@ export default function AboutScreen() {
      </TouchableOpacity>
     </View>
 
-    {/* Tech Stack */}
+    {}
     <View style={styles.techStackSection}>
      <Text style={styles.techStackTitle}>Built With</Text>
      <View style={styles.techStackRow}>
@@ -215,7 +215,7 @@ export default function AboutScreen() {
      </View>
     </View>
 
-    {/* Footer */}
+    {}
     <View style={styles.footer}>
      <Text style={styles.footerText}>Made with ❤️ by {appInfo.developer}</Text>
      <Text style={styles.footerCopyright}>
